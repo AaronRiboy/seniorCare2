@@ -3,160 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>Manage Service Request</title>
-    <link href="D:\Program\Github\Test\style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="portfolioStyle.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous">
   </head>
   <body>
-<!--sample data-->
-<section>
-  <div id="booking" class="section-1">
-
-    <div class="section-center">
-      <div class="container ">
-        <div class="row ">
-          <div class="booking-form col-md-12 col-sm-12">
-            <div class="container">
-<div class="row">
-
-
-    <div class="col-md-12">
-    <h4>Bootstrap Snipp for Datatable</h4>
-    <div class="table-responsive">
-
-
-          <table id="mytable" class="table table-bordred table-striped">
-
-               <thead>
-
-               <th><input type="checkbox" id="checkall" /></th>
-               <th>First Name</th>
-                <th>Last Name</th>
-                 <th>Address</th>
-                 <th>Email</th>
-                 <th>Contact</th>
-                  <th>Edit</th>
-
-                   <th>Delete</th>
-               </thead>
-<tbody>
-
-<tr>
-<td><input type="checkbox" class="checkthis" /></td>
-<td>Mohsin</td>
-<td>Irshad</td>
-<td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-<td>isometric.mohsin@gmail.com</td>
-<td>+923335586757</td>
-<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-</tr>
-
-<tr>
-<td><input type="checkbox" class="checkthis" /></td>
-<td>Mohsin</td>
-<td>Irshad</td>
-<td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-<td>isometric.mohsin@gmail.com</td>
-<td>+923335586757</td>
-<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-</tr>
-
-
-<tr>
-<td><input type="checkbox" class="checkthis" /></td>
-<td>Mohsin</td>
-<td>Irshad</td>
-<td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-<td>isometric.mohsin@gmail.com</td>
-<td>+923335586757</td>
-<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-</tr>
-
-
-
-<tr>
-<td><input type="checkbox" class="checkthis" /></td>
-<td>Mohsin</td>
-<td>Irshad</td>
-<td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-<td>isometric.mohsin@gmail.com</td>
-<td>+923335586757</td>
-<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-</tr>
-
-
-<tr>
-<td><input type="checkbox" class="checkthis" /></td>
-<td>Mohsin</td>
-<td>Irshad</td>
-<td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-<td>isometric.mohsin@gmail.com</td>
-<td>+923335586757</td>
-<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-</tr>
-
-
-
-
-
-</tbody>
-
-</table>
-
-<div class="clearfix"></div>
-<ul class="pagination pull-right">
-<li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-<li class="active"><a href="#">1</a></li>
-<li><a href="#">2</a></li>
-<li><a href="#">3</a></li>
-<li><a href="#">4</a></li>
-<li><a href="#">5</a></li>
-<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-</ul>
-
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img\LogoS.png" class="logo"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#booking">Booking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#">Sign Up</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-    </div>
-</div>
-</div>
-
-
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-  <div class="modal-dialog">
-<div class="modal-content">
-      <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-    <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
-  </div>
-      <div class="modal-body">
-      <div class="form-group">
-    <input class="form-control " type="text" placeholder="Mohsin">
-    </div>
-    <div class="form-group">
-
-    <input class="form-control " type="text" placeholder="Irshad">
-    </div>
-    <div class="form-group">
-    <textarea rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
-
-
-    </div>
-  </div>
-      <div class="modal-footer ">
-    <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
-  </div>
-    </div>
-
-
-
-</section>
 
   </body>
 </html>
