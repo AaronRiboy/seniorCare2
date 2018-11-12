@@ -66,19 +66,20 @@ th, td {
       <th>Service Name</th>
       <th>Booking Date</th>
       <th>Booking Time</th>
-      <th>Number of Service</th>
       <th>Notes</th>
+      <th>Number of Services</th>
       <th>Status</th>
     </tr>
 
       <?php
-          $conn =mysqli_connect("localhost","root","","senircare")
-          if ($conn-> connect_error){
-            die("Connection failed:". $conn -> connect_error);
-          }
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "seniorcare";
+      $con = new mysqli($servername, $username, $password, $dbname);
 
           $sql = "SELECT serviceID, serviceName,bookingDate,bookingTime,notes,numOfServices,status from booking";
-          $result = $conn -> query($sql);
+          $result = $con -> query($sql);
 
           if ($result-> num_rows > 0 ){
             while($row = $result -> fetch_assoc()){
@@ -91,7 +92,7 @@ th, td {
           else {
             echo "0 result";
           }
-          $conn ->close();
+          $con ->close();
 
            ?>
          </table>
