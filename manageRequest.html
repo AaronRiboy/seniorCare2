@@ -12,7 +12,19 @@
       <!--===============================================================================================-->
 
 	<link rel="stylesheet" type="text/css" href="style_table.css">
-<!--=============================================================================================
+  <style>
+  table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+  </style>
+
   </head>
   <body>
     <!-- Navigation -->
@@ -45,161 +57,48 @@
       </div>
     </nav>
 
+<br><br><br> <br> <br><br>
 
-<div class="limiter">
-  <div class="container-table100">
-    <div class="wrap-table100">
-        <div class="table">
+<div class="container">
+  <table>
+    <tr>
+      <th>Service ID</th>
+      <th>Service Name</th>
+      <th>Booking Date</th>
+      <th>Booking Time</th>
+      <th>Number of Service</th>
+      <th>Notes</th>
+      <th>Status</th>
+    </tr>
 
-          <div class="row header">
-            <div class="cell">
-              Full Name
-            </div>
-            <div class="cell">
-              Age
-            </div>
-            <div class="cell">
-              Job Title
-            </div>
-            <div class="cell">
-              Location
-            </div>
-          </div>
+      <?php
+          $conn =mysqli_connect("localhost","root","","senircare")
+          if ($conn-> connect_error){
+            die("Connection failed:". $conn -> connect_error);
+          }
 
-          <div class="row">
-            <div class="cell" data-title="Full Name">
-              Vincent Williamson
-            </div>
-            <div class="cell" data-title="Age">
-              31
-            </div>
-            <div class="cell" data-title="Job Title">
-              iOS Developer
-            </div>
-            <div class="cell" data-title="Location">
-              Washington
-            </div>
-          </div>
+          $sql = "SELECT serviceID, serviceName,bookingDate,bookingTime,notes,numOfServices,status from booking";
+          $result = $conn -> query($sql);
 
-          <div class="row">
-            <div class="cell" data-title="Full Name">
-              Joseph Smith
-            </div>
-            <div class="cell" data-title="Age">
-              27
-            </div>
-            <div class="cell" data-title="Job Title">
-              Project Manager
-            </div>
-            <div class="cell" data-title="Location">
-              Somerville, MA
-            </div>
-          </div>
+          if ($result-> num_rows > 0 ){
+            while($row = $result -> fetch_assoc()){
+              echo "<tr> <td>".$row["serviceID"]."</td> <td>".$row["serviceName"]."</td><td>".$row["bookingDate"]."</td><td>"
+              .$row["bookingTime"]."</td><td>".$row["notes"]."</td><td>".$row["numOfServices"]."</td><td>".$row["status"]."</td></tr>";
 
-          <div class="row">
-            <div class="cell" data-title="Full Name">
-              Justin Black
-            </div>
-            <div class="cell" data-title="Age">
-              26
-            </div>
-            <div class="cell" data-title="Job Title">
-              Front-End Developer
-            </div>
-            <div class="cell" data-title="Location">
-              Los Angeles
-            </div>
-          </div>
+            }
+            echo "</table>";
+          }
+          else {
+            echo "0 result";
+          }
+          $conn ->close();
 
-          <div class="row">
-            <div class="cell" data-title="Full Name">
-              Sean Guzman
-            </div>
-            <div class="cell" data-title="Age">
-              25
-            </div>
-            <div class="cell" data-title="Job Title">
-              Web Designer
-            </div>
-            <div class="cell" data-title="Location">
-              San Francisco
-            </div>
-          </div>
+           ?>
+         </table>
 
-          <div class="row">
-            <div class="cell" data-title="Full Name">
-              Keith Carter
-            </div>
-            <div class="cell" data-title="Age">
-              20
-            </div>
-            <div class="cell" data-title="Job Title">
-              Graphic Designer
-            </div>
-            <div class="cell" data-title="Location">
-              New York, NY
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="cell" data-title="Full Name">
-              Austin Medina
-            </div>
-            <div class="cell" data-title="Age">
-              32
-            </div>
-            <div class="cell" data-title="Job Title">
-              Photographer
-            </div>
-            <div class="cell" data-title="Location">
-              New York
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="cell" data-title="Full Name">
-              Vincent Williamson
-            </div>
-            <div class="cell" data-title="Age">
-              31
-            </div>
-            <div class="cell" data-title="Job Title">
-              iOS Developer
-            </div>
-            <div class="cell" data-title="Location">
-              Washington
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="cell" data-title="Full Name">
-              Joseph Smith
-            </div>
-            <div class="cell" data-title="Age">
-              27
-            </div>
-            <div class="cell" data-title="Job Title">
-              Project Manager
-            </div>
-            <div class="cell" data-title="Location">
-              Somerville, MA
-            </div>
-          </div>
-
-        </div>
-    </div>
-  </div>
 </div>
 
-<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
 
 
 
