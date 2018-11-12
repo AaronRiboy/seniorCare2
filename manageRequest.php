@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Manage Service Request</title>
     <link href="style.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -28,7 +29,7 @@
               <a class="nav-link js-scroll-trigger" href="#portfolio">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#booking">Booking</a>
+              <a class="nav-link js-scroll-trigger" href="index.html">Booking</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">About</a>
@@ -47,7 +48,8 @@
 <br><br><br> <br> <br><br>
 
 
-
+<h1 class="yellow">Manage Request</h1>
+<br>
 <div class="container">
   <table>
     <tr >
@@ -88,9 +90,6 @@
 
 
 </div>
-
-
-
 
   </body>
 </html>
