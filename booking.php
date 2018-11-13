@@ -3,7 +3,7 @@
  $servername = "localhost";
  $username = "root";
  $password = "";
- $dbname = "booking";
+ $dbname = "seniorcare";
  $con = new mysqli($servername, $username, $password, $dbname);
 
  $serviceName=$_POST['serviceName'];
@@ -12,18 +12,32 @@
  $notes=$_POST['notes'];
  $numOfServices=$_POST['numOfServices'];
 
- if (!empty($serviceName) || !empty($bookingDate) || !empty($bookingTime) || !empty($numOfServices)){
-   #code
- }else {
-   echo "The field are required except 'Optional' ";
-   die;
+
+
+
+//validation for html
+
+ //thank you letter after submitting the form
+
+
+//test
+ if(isset($_POST['submit'])) {
+    echo "Error your has not send";
+ } else {
+   $sql = "INSERT INTO `booking` ( `serviceName`, `bookingDate`, `bookingTime`, `notes`, `numOfServices`)
+    VALUES ('$serviceName','$bookingDate','$bookingTime','$notes','$numOfServices')";
+            mysqli_query($con, $sql);
+
+     echo "<script>
+             alert('Your Booking request has sent successfully.Thank you');
+             window.history.go(-1);
+          </script>";
  }
 
 
- $sql = "INSERT INTO  booking(serviceName,bookingDate,bookingTime,notes,numOfServices)
-         VALUES ('$serviceName','$bookingDate','$bookingTime','$notes','$numOfServices')";
 
- mysqli_query($con, $sql);
+
+
  mysqli_close($con);
 
 ?>
