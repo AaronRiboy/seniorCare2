@@ -1,3 +1,4 @@
+<body>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,7 +15,6 @@
 	<link rel="stylesheet" type="text/css" href="style_mr.css">
 
 
-  <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
