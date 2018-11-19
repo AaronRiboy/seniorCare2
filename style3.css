@@ -40,6 +40,13 @@ button:hover {
     margin-left: 430px;
 }
 
+/* Extra style for the sign in button (red) */
+.signinbtn {
+    width: 30%;
+    padding: 10px 18px;
+    background-color: #b30059;
+    margin-left: 430px;
+}
 /* Center the avatar image inside this container */
 .imgcontainer {
     text-align: center;

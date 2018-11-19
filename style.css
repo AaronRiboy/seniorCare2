@@ -1,11 +1,5 @@
-    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
-
-.jumbotron{
-  background-color: #ADD8E6 rgba;
-
-
-}
 
 
 // Styling for the navbar
@@ -30,7 +24,7 @@
         letter-spacing: 1px;
         color: white;
         @include heading-font;
-        &.active,
+        &:active, 
         &:hover {
 
         }
@@ -216,8 +210,6 @@ figure {
   background-size: cover;
   height: 500px;
 }
-
-
 
 .service-text{
   color: white;
