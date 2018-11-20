@@ -40,10 +40,10 @@ $user = mysqli_fetch_array($query_user);
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="accept.html">Accept Request</a>
+            <a class="nav-link js-scroll-trigger" href="accept.php">Accept Request</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Manage Request</a>
+            <a class="nav-link js-scroll-trigger" href="manageRequestService.php">Manage Request</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="includes/logout.php">Log Out</a>

@@ -23,7 +23,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img\LogoS.png" class="logo"></a>
+          <a class="navbar-brand js-scroll-trigger" href="homeSenior.php"><img src="img\LogoS.png" class="logo"></a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -32,7 +32,7 @@
             <ul class="navbar-nav text-uppercase ml-auto">
 
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="serviceRequest.html">Submit Request</a>
+                <a class="nav-link js-scroll-trigger" href="serviceRequest.php">Submit Request</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="manageRequestUser.php">Manage Request</a>
@@ -170,7 +170,7 @@ $(document).ready(function(){
         edit_data(serviceID,numOfServices, "numOfServices");
     });
     $(document).on('blur', '.status', function(){
-        var serviceID = $(this).data("id5");
+        var serviceID = $(this).data("id6");
         var status = $(this).text();
         edit_data(serviceID,status, "status");
     });

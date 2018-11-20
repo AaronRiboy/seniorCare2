@@ -1,145 +1,92 @@
+<?php  include "includes/signup.php"; ?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<?php
+<head>
+  <meta charset="utf-8">
+  <title>SeniorCare</title>
+  
+   
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
 
-include("includes/dbconnection.php");
-$name_error = $email_error = $phone_error = $username_error = $password_error = $user_type_error ="";
-$name = $email = $phone = $username = $password = $address = $user_type =  "";
+      <link rel="stylesheet" href="style3.css">
+   
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="signup.css" type="text/css">
+    <!-- Responsive CSS Styles -->
+    <link rel="stylesheet" href="responsive.css" type="text/css">
+</head>
 
+<body style="background-image:url(signup2.jpg) ; background-size: cover">
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+         
+ <!-- Header Section Start -->
+      <div class="header"> 
+          <h1 style="color:#00b3b3; text-align:center; padding-top:20px; font-weight:bold">SeniorCare SignUp</h1><br>
+          
+        <!-- Start intro section -->
+        
+      <!-- Header Section End -->  
 
-        if(empty($_POST['username'])){
-            $username_error = "Username is required";
-        } else {
-            $username = $_POST['username'];
+          <!-- Off Canvas Navigation -->
+  <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>">      
+  <div class="login-wrap">
+	<div class="login-html">
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label" style="color:#00b3b3; font-size:20px; font-weight:bold">Username</label>
+					<input id="user" type="text" class="input" name="username" value="<?php echo $username; ?>">
+          <span><?php echo $username_error; ?></span>
+				</div>
+				<div class="group">
+					<label for="pass" class="label" style="color:#00b3b3; font-size:20px; font-weight:bold">Password</label>
+					<input id="pass" type="password" class="input" name="password">
+          <span><?php echo $password_error; ?></span>
 
-            //check if username is available in database
-            $sql = "select USERNAME from signup WHERE USERNAME='".$username."'";
-            $query = mysqli_query($dbCon,$sql);
-            echo mysqli_error($dbCon);
-            if(mysqli_num_rows($query) == TRUE){
-                $username_error = "Username already exists";
-            }
+				</div>
+				<div class="group">
+					<label for="pass" class="label" style="color:#00b3b3; font-size:20px; font-weight:bold">Fullname</label>
+					<input id="fullname" type="text" class="input" name="name" value="<?php echo $name; ?>">
+          <span><?php echo $name_error; ?></span>
+				</div>
+				<div class="group">
+					<label for="pass" class="label" style="color:#00b3b3; font-size:20px; font-weight:bold">Email Address</label>
+					<input id="email" type="text" class="input" name="email" value="<?php $email; ?>">
+          <span><?php echo $email_error; ?></span>
+				</div>
+                <div class="group">
+					<label for="number" class="label" style="color:#00b3b3; font-size:20px; font-weight:bold">Mobile No</label>
+					<input id="number" type="integer" class="input" name="mobile" style="font-size: 20px" value="<?php $phone; ?>">
+          <span><?php echo $phone_error; ?></span>
+				</div>
+                <div class="group">
+					<label for="address" class="label" style="color:#00b3b3; font-size:20px; font-weight:bold">Address</label>
+					<input id="address" type="text" class="input" name="address" value="<?php $address; ?>">
+          <span><?php echo $phone_error; ?></span>
+				</div>
 
-                if(!preg_match("/^[a-zA-Z ]*$/",$username)){
-                    $username_error = "Only letters and white space allowed";
-                }
-
-        } // end of username validation
-
-
-        if(empty($_POST['password'])){
-            $password_error = "Password is required";
-        } else {
-            $password = $_POST['password'];
-
-            if(strlen($password) <= 8){
-                $password_error = "Password should contain more than 8 characters";
-            }
-
-        } // end of password validation
-
-
-
-
-        if(empty($_POST['name'])){
-            $name_error = "Full name is required";
-        } else {
-            $name = $_POST['name'];
-
-            if(!preg_match("/^[a-zA-Z ]*$/",$name)){
-                $name_error = "Only letters and white space allowed";
-            }
-
-
-        } // end of full name validation
-
-
-
-        if(empty($_POST['email'])){
-            $email_error = "Email is required";
-        } else {
-            $email = $_POST['email'];
-
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                $email_error = "Invalid email format";
-            }
-
-
-        } // end of email validation
-
-
-        if(empty($_POST['mobile'])){
-            $phone_error = "Mobile Number is required";
-        } else {
-            $phone = $_POST['mobile'];
-
-          if(!preg_match("/^[0-9\-]|[\+0-9]|[0-9\s]|[0-9()]*$/",$phone)){
-            $phone_error = "Invalid Phone number";
-          }
-            if(empty($_POST['address'])){
-            $phone_error = "Address is required";
-        }
-
-        } // end of phone number validation
-
-        if(empty($_POST['user_type'])){
-            $user_type_error = "Please select user type";
-        } else {
-            $user_type = $_POST['user_type'];
-
-        } // end of user type validation
+ <div class="group">
+ <label for="pass" class="label" style="color:#00b3b3; font-size:20px; font-weight:bold">User Type</label><br/>
+        <input type="radio" value="senior" name="user_type" style="font-size:18px">&nbsp;<label style="font-size:15px">Senior Citizen</label>
+        <input type="radio" value="service-provider" name="user_type" style="font-size:18px">&nbsp;<label style="font-size:15px">Service Provider</label><br><br>
+				<div class="group">
+					<input type="submit" style="float: left; width: 25%; padding: 14px 20px; background-color: #b30059; margin-left:350px; font-size:20px" class="button" value="Sign Up">
+				</div>
+                <div class="group">
+                    <a href="index.php"><input type="submit" style="float: left; width: 25%; padding: 14px 20px; background-color: #00b3b3; font-size:20px" class="button" value="Cancel"></a>
+				</div>
+                
+				<span class="signup" style="color:#ffffff ; margin-left:580px; font-size:16px">Already Registered? <a href="signin.php" style="color: #00b3b3; font-size:16px; font-weight:bold">Log In</a></span>
+			</div>
 
 
-
-
-
-       if($name_error == '' and $phone_error == '' and $username_error == '' and $password_error == '' and $user_type_error == ''){
-
-        $user_type = $_POST['user_type'];
-        $datetime = date("Y-m-d H:i:s");
-        $date = date("Y-m-d");
-
-
-        $sql_insert = "INSERT INTO signup (username,password,fullname ,email,mobile,address,user_type) VALUES ('".$username."','".$password."','".$name."','".$email."','".$phone."','".$address."','".$user_type."')";
-        $query_insert = mysqli_query($dbCon,$sql_insert);
-           echo mysqli_error($dbCon);
-        if($query_insert == TRUE ){
-
-
-            echo "<script type='text/javascript'>
-                    alert('Successfully Registered.');
-                    </script>";
-
-            if($user_type == 'senior'){
-
-                $_SESSION['auth'] = 1;
-                $_SESSION['name'] = $name;
-                $_SESSION['user_id'] = $dbCon->insert_id;
-
-                header("Location: signin.php");
-
-                echo "<script type='text/javascript'>
-                    alert('Successfully Registered.');
-                    </script>";
-
-
-            } else {
-                $_SESSION['auth'] = 1;
-                $_SESSION['name'] = $name;
-                $_SESSION['user_id'] = $dbCon->insert_id;
-                header("Location: signin.php");
-
-            }
-
-
-
-        }
-
-       }
-
-
-}
-
-
-?>
+    
+		</div>
+      </div>
+      </div></div>
+</form>
+      </div>
+</body>
+</html>
+  
