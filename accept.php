@@ -26,9 +26,7 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
 
-              <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">Accept Request</a>
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="manageRequestService.php">Manage Request</a>
               </li>

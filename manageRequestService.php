@@ -34,9 +34,6 @@
                 <a class="nav-link js-scroll-trigger" href="accept.php">Accept Request</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#">Manage Request</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="includes/logout.php">Log Out</a>
               </li>
             </ul>
