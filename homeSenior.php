@@ -1,4 +1,4 @@
-<?php  
+<?php
 include "includes/signin.php";
 
 $sql_user = "SELECT * FROM signup WHERE user_id='".$_SESSION['user_id']."'";
@@ -39,12 +39,12 @@ $user = mysqli_fetch_array($query_user);
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
-        
+
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#booking">Submit Request</a>
+            <a class="nav-link js-scroll-trigger" href="serviceRequest.html">Submit Request</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="manageRequest.html">Manage Request</a>
+            <a class="nav-link js-scroll-trigger" href="manageRequestUser.php">Manage Request</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="includes/logout.php">Log Out</a>

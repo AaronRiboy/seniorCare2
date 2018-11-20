@@ -14,12 +14,6 @@
 
 
 
-
-//validation for html
-
- //thank you letter after submitting the form
-
-
 //test
  if(isset($_POST['submit'])) {
     echo "Error your has not send";
